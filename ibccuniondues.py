@@ -60,8 +60,8 @@ if hourly_rate > 0:
 
     st.subheader("Results")
 
-    st.metric("Dues per paycheck (if paycheck 2x per month)", f"${dues_per_paycheck24:,.2f}")
     st.metric("Dues per paycheck (if paycheck every 2 weeks)", f"${dues_per_paycheck26:,.2f}")
+    st.metric("Dues per paycheck (if paycheck 2x per month)", f"${dues_per_paycheck24:,.2f}")
     st.metric("Dues per month", f"${dues_per_month:,.2f}")
     st.metric("Dues per year", f"${dues_per_year:,.2f}")
     st.metric("Dues as % of annual salary", f"{dues_as_pct_salary:.2f}%")
