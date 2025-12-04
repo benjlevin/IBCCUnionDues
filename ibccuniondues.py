@@ -13,7 +13,7 @@ This tool helps you estimate your union dues based on your earnings.
 # Inputs
 # -------------------------
 
-employment_type = st.radio("Are you salaried or hourly?", ["Salaried", "Hourly"],index=None)
+employment_type = st.radio("Are you salaried or hourly?", ["Salaried", "Hourly"])
 
 if employment_type == "Salaried":
     annual_salary = st.number_input("Annual salary (before taxes)", min_value=0, step=1000, value=116796)
@@ -22,11 +22,10 @@ if employment_type == "Salaried":
     if annual_salary > 0 and hours_per_week > 0:
         hourly_rate = annual_salary / 52 / hours_per_week
         st.write(f"**Effective hourly rate:** ${hourly_rate:,.2f}")
-if employment_type == "Hourly":
+else:
     hourly_rate = st.number_input("Hourly wage", min_value=0.0, value=56.15)
     hours_per_week = st.number_input("Hours worked per week", min_value=1, value=40, step=1)
-else:
-    st.write("")
+
 # -------------------------
 # Dues Calculation Logic
 # -------------------------
