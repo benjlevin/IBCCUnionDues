@@ -25,7 +25,6 @@ if employment_type == "Salaried":
 if employment_type == "Hourly":
     hourly_rate = st.number_input("Hourly wage", min_value=0.0, value=56.15)
     hours_per_week = st.number_input("Hours worked per week", min_value=1, value=40, step=1)
-else:
 
 # -------------------------
 # Dues Calculation Logic
