@@ -4,8 +4,8 @@ st.title("IBCC Union Dues Calculator")
 
 st.write("""
 This tool helps you estimate your union dues based on your earnings.
-Dues are **1.5% of earnings** up to a wage cap of $56.15/hour  
-(which results in a maximum dues rate of $0.84 per hour worked).
+Dues are **1.5% of earnings** up to a wage cap of '$56.15/hour  
+(which results in a maximum dues rate of '$0.84 per hour worked).
 """)
 
 # -------------------------
