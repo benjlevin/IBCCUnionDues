@@ -13,7 +13,7 @@ This tool helps you estimate your union dues based on your earnings.
 # Inputs
 # -------------------------
 
-employment_type = st.radio("Are you salaried or hourly?", ["Salaried", "Hourly"])
+employment_type = st.radio("Are you salaried or hourly?", ["Salaried", "Hourly"],index=none)
 
 if employment_type == "Salaried":
     annual_salary = st.number_input("Annual salary (before taxes)", min_value=0, step=1000, value=116796)
