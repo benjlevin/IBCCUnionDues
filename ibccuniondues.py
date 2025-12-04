@@ -15,7 +15,7 @@ Dues are **1.5% of earnings** up to a wage cap of $56.15/hour
 employment_type = st.radio("Are you salaried or hourly?", ["Salaried", "Hourly"])
 
 if employment_type == "Salaried":
-    annual_salary = st.number_input("Annual salary (before taxes)", min_value=0.0, step=1000.0)
+    annual_salary = st.number_input("Annual salary (before taxes)", min_value=1000.0, step=1000.0)
     hours_per_week = st.number_input("Hours worked per week", min_value=1.0, step=1.0)
 
     if annual_salary > 0 and hours_per_week > 0:
