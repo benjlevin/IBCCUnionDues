@@ -4,6 +4,7 @@ st.title("IBCC Union Dues Calculator")
 
 st.write("""
 This tool helps you estimate your union dues based on your earnings.
+**Reminder - No dues owed until a contract is finalized**
 Dues are **1.5% of earnings** up to a wage cap of **56.15/hour**  
 (which results in a maximum dues rate of **0.84 per hour worked**).
 """)
@@ -41,7 +42,8 @@ if hourly_rate > 0:
         dues_per_hour = 0.015 * hourly_rate
 
     dues_per_year = dues_per_hour * hours_worked_year
-    dues_per_paycheck = dues_per_year / 24
+    dues_per_paycheck24 = dues_per_year / 24
+    dues_per_paycheck26 = dues_per_year / 26
     dues_per_month = dues_per_year / 12
 
     # For salaried workers, annual salary is known
@@ -58,7 +60,8 @@ if hourly_rate > 0:
 
     st.subheader("Results")
 
-    st.metric("Dues per paycheck (24 per year)", f"${dues_per_paycheck:,.2f}")
+    st.metric("Dues per paycheck (if paycheck 2x per month)", f"${dues_per_paycheck24:,.2f}")
+    st.metric("Dues per paycheck (if paycheck every 2 weeks)", f"${dues_per_paycheck26:,.2f}")
     st.metric("Dues per month", f"${dues_per_month:,.2f}")
     st.metric("Dues per year", f"${dues_per_year:,.2f}")
     st.metric("Dues as % of annual salary", f"{dues_as_pct_salary:.2f}%")
